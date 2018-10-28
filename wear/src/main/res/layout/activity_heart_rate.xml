@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="@dimen/box_inset_layout_padding"
+  android:background="@color/dark_grey"
+  android:keepScreenOn="true"
+  tools:context="ro.upt.sma.heart.HeartMonitorActivity"
+  tools:deviceIds="wear">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/inner_frame_layout_padding"
+    app:layout_box="all">
+
+    <ImageView
+      android:id="@+id/iv_heart_logo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/ic_heart"/>
+
+    <TextView
+      android:id="@+id/tv_heart_value"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp"
+      android:layout_below="@id/iv_heart_logo"
+      android:layout_centerHorizontal="true"
+      android:text="-"
+      android:textSize="16sp"/>
+
+    <TextView
+      android:id="@+id/tv_heart_code_description"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@id/tv_heart_code_value"
+      android:layout_centerHorizontal="true"
+      android:text="Monitoring code"
+      android:textSize="13sp"/>
+
+    <TextView
+      android:id="@+id/tv_heart_code_value"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:text="-"
+      android:textSize="16sp"/>
+
+  </RelativeLayout>
+
+</android.support.wearable.view.BoxInsetLayout>
