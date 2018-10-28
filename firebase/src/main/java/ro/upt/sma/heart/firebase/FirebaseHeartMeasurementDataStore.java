@@ -22,7 +22,7 @@ public class FirebaseHeartMeasurementDataStore implements HeartMeasurementReposi
 
   @Override
   public void post(HeartMeasurement heartMeasurement) {
-    reference.child(heartMeasurement.timestamp + "").setValue(heartMeasurement.value);
+    reference.child(heartMeasurement.getTimestamp() + "").setValue(heartMeasurement.getValue());
   }
 
   @Override
