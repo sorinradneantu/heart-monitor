@@ -24,7 +24,5 @@ class HeartAssistantPresenterImpl(private val repository: HeartMeasurementReposi
         })
     }
 
-    override fun unbind() {
-        //TODO: cleanup resources
-    }
+    override fun unbind() {}
 }

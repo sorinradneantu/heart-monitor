@@ -13,8 +13,10 @@ class HeartMonitorPresenterImpl(private val heartSensorRepository: HeartSensorRe
     override fun bind(view: HeartMonitorView) {
         heartRateListener = object : HeartSensorRepository.HeartRateListener {
             override fun onValueChanged(value: Int) {
-                view.showLastMeasurement(HeartMeasurement(System.currentTimeMillis(),value))
-                heartMeasurementRepository.post(HeartMeasurement(System.currentTimeMillis(), value))
+                val heartMeasurement = HeartMeasurement(System.currentTimeMillis(), value)
+
+                view.showLastMeasurement(heartMeasurement)
+                heartMeasurementRepository.post(heartMeasurement)
             }
         }
 

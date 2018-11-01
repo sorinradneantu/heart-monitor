@@ -14,7 +14,6 @@ import ro.upt.sma.heart.model.HeartMeasurement
 import ro.upt.sma.heart.presenters.monitor.HeartMonitorPresenter
 import ro.upt.sma.heart.presenters.monitor.HeartMonitorView
 import ro.upt.upt.sma.heart.injection.Injection
-import java.text.MessageFormat
 
 class HeartMonitorActivity : WearableActivity() , HeartMonitorView {
 
@@ -45,7 +44,6 @@ class HeartMonitorActivity : WearableActivity() , HeartMonitorView {
         presenter.unbind()
     }
 
-
     private fun checkPermission() {
         if (ContextCompat.checkSelfPermission(this, permission.BODY_SENSORS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(permission.BODY_SENSORS), 112)
@@ -65,7 +63,7 @@ class HeartMonitorActivity : WearableActivity() , HeartMonitorView {
     }
 
     override fun showLastMeasurement(heartMeasurement: HeartMeasurement) {
-        tv_heart_value.text = MessageFormat.format("{0} bpm", heartMeasurement.value)
+        TODO("Set heart textview value")
     }
 
 }
