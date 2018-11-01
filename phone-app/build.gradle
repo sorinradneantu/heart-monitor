@@ -1,11 +1,13 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 21
+        applicationId "ro.upt.sma.heart"
+        minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -25,9 +27,19 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation project(path: ':injection')
     implementation project(path: ':presenter')
-    implementation project(path: ':data')
+    implementation project(path: ':domain')
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
+
 }
+
+apply plugin: 'com.google.gms.google-services'

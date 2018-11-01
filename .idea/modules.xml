@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/firebase/firebase.iml" filepath="$PROJECT_DIR$/firebase/firebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/injection/injection.iml" filepath="$PROJECT_DIR$/injection/injection.iml" />
-      <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/phone/phone.iml" filepath="$PROJECT_DIR$/phone/phone.iml" />
-      <module fileurl="file://$PROJECT_DIR$/presenters/presenters.iml" filepath="$PROJECT_DIR$/presenters/presenters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phone-app/phone-app.iml" filepath="$PROJECT_DIR$/phone-app/phone-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/presenter/presenter.iml" filepath="$PROJECT_DIR$/presenter/presenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/smaheart.iml" filepath="$PROJECT_DIR$/smaheart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wear-app/wear-app.iml" filepath="$PROJECT_DIR$/wear-app/wear-app.iml" />
     </modules>
   </component>
 </project>

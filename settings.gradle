@@ -1,1 +1,1 @@
-include ':wear', ':phone', ':model', ':presenters', ':firebase', ':injection'
+include ':wear-app', ':phone-app', ':domain', ':presenter', ':data', ':injection'
