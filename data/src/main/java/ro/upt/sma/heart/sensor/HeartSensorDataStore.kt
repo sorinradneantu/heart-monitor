@@ -38,7 +38,6 @@ class HeartSensorDataStore(context: Context) : HeartSensorRepository {
         listeners[listener] = eventListener
     }
 
-
     override fun unregisterHeartRateListener(listener: HeartSensorRepository.HeartRateListener) {
         if (listeners.containsKey(listener)) {
             val eventListener = listeners[listener]
