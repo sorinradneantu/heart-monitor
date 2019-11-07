@@ -3,12 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         applicationId "ro.upt.sma.heart"
         minSdkVersion 25
-        targetSdkVersion 28
+        targetSdkVersion 29
 
         versionCode 1
         versionName "1.0"
@@ -37,7 +37,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     compileOnly 'com.google.android.wearable:wearable:2.4.0'
-
 }
 
 apply plugin: 'com.google.gms.google-services'
