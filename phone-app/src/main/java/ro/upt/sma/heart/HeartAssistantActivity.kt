@@ -23,7 +23,8 @@ class HeartAssistantActivity : AppCompatActivity(), HeartAssistantView {
 
         rv_heart_assistant_measurement_list.layoutManager = LinearLayoutManager(this)
 
-        val code = "3c8c"
+        // FIXME: add specific WEAR device code
+        val code = ""
         this.presenter = Injection.provideHeartAssistantPresenter(code)
     }
 
@@ -42,12 +43,14 @@ class HeartAssistantActivity : AppCompatActivity(), HeartAssistantView {
     override fun showLast(heartMeasurement: HeartMeasurement) {
         Log.d(TAG, "showLast: $heartMeasurement")
 
-        tv_heart_assistant_instant_value.text = MessageFormat.format("{0} bpm", heartMeasurement.value)
+        tv_heart_assistant_instant_value.text =
+            MessageFormat.format("{0} bpm", heartMeasurement.value)
         tv_heart_assistant_instant_date!!.text =
-                DateUtils.getRelativeTimeSpanString(
-                        heartMeasurement.timestamp,
-                        System.currentTimeMillis(),
-                        DateUtils.SECOND_IN_MILLIS)
+            DateUtils.getRelativeTimeSpanString(
+                heartMeasurement.timestamp,
+                System.currentTimeMillis(),
+                DateUtils.SECOND_IN_MILLIS
+            )
     }
 
     override fun showList(heartMeasurementList: List<HeartMeasurement>) {
