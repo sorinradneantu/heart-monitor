@@ -15,7 +15,7 @@ class HeartSensorDataStore(context: Context) : HeartSensorRepository {
 
     private val sensorManager: SensorManager = context.getSystemService(SENSOR_SERVICE) as SensorManager
 
-    private val heartRateSensor: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE)
+    private val heartRateSensor: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE)
 
     private val listeners = HashMap<HeartSensorRepository.HeartRateListener, SensorEventListener>()
 
